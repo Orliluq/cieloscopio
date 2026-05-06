@@ -34,6 +34,8 @@ No es solo código… es una conversación con el cielo 🌤️
 [//]: # ()
 [//]: # (---)
 
+---
+
 ## 📸 Screenshots
 
 ### 🌤️ Resultado en consola
@@ -42,6 +44,9 @@ No es solo código… es una conversación con el cielo 🌤️
 [//]: # (### 🎨 Interfaz estilo dashboard)
 
 [//]: # (![Console UI]&#40;https://via.placeholder.com/800x300.png?text=CLI+Weather+Dashboard&#41;)
+
+### 🌤️ Resultado en postman
+![Weather Output](/postman1.jpg)
 
 ---
 
@@ -177,15 +182,17 @@ java -jar target/cieloscopio.jar
 
 ```tex
 ════════════════════════════════════════════
-📍 Ciudad        : Caracas 🇻🇪
-🌡️ Temperatura   : 27.3 °C
-🤔 Sensación     : 28.4 °C
-💧 Humedad       : 59 %
-📊 Presión       : 1013 hPa
-🌬️ Viento        : 2.4 m/s
-👁️ Visibilidad   : 10 km
-☁️ Clima         : algo de nubes
-🕒 Fecha         : 06/05/2026 19:42
+📍 Ciudad   : Caracas 🇻🇪     
+ 🌡️ Temperatura : 29.82 °C         
+ 🤔 Sensación : 0.0 °C           
+ 💧 Humedad  : 52 %             
+ 📊 Presión  : 1013 hPa         
+ 🌬️ Viento  : 2.57 m/s (ENE)   
+ 👁️ Visibilidad : 10 km            
+ ☁️ Clima    : algo de nubes    
+ 🌅 Amanecer : 06:07            
+ 🌇 Atardecer : 18:40            
+ 🕒 Fecha    : 05/05/2026 14:58
 ════════════════════════════════════════════
 ``` 
 ---

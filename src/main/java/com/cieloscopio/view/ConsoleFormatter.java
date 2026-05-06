@@ -37,21 +37,23 @@ public final class ConsoleFormatter {
         // 🌍 CIUDAD
         printLine(CYAN + "📍 Ciudad", response.name() + " " + flag);
 
-        // 🌡️ TEMPERATURA (con color dinámico)
-        printLine(
-                TemperatureColor.color(response.main().temp()) + "🌡️ Temperatura",
-                response.main().temp() + " °C"
-        );
+        // 🌡️ TEMPERATURA con color dinámico
+        String tempColor = TemperatureColor.color(response.main().temp());
+        printLine(tempColor + "🌡️ Temperatura",
+                response.main().temp() + " °C");
 
         // 🤔 SENSACIÓN
-        printLine(MAGENTA + "🤔 Sensación", response.main().feelsLike() + " °C");
+        printLine(MAGENTA + "🤔 Sensación",
+                response.main().feelsLike() + " °C");
 
         // 💧 HUMEDAD
-        printLine(BLUE + "💧 Humedad", response.main().humidity() + " %");
+        printLine(BLUE + "💧 Humedad",
+                response.main().humidity() + " %");
 
         // 📊 PRESIÓN
         if (response.main().pressure() > 0) {
-            printLine(GREEN + "📊 Presión", response.main().pressure() + " hPa");
+            printLine(GREEN + "📊 Presión",
+                    response.main().pressure() + " hPa");
         }
 
         // 🌬️ VIENTO
@@ -63,7 +65,8 @@ public final class ConsoleFormatter {
 
         // 👁️ VISIBILIDAD
         if (response.visibility() > 0) {
-            printLine(MAGENTA + "👁️ Visibilidad", (response.visibility() / 1000) + " km");
+            printLine(MAGENTA + "👁️ Visibilidad",
+                    (response.visibility() / 1000) + " km");
         }
 
         // ☁️ CLIMA
@@ -72,12 +75,23 @@ public final class ConsoleFormatter {
                     response.weather().getFirst().description());
         }
 
+        // 🌅🌇 SOL (seguro null-safe)
+        if (response.sys() != null) {
+
+            String sunrise = SunFormatter.format(response.sys().sunrise());
+            String sunset = SunFormatter.format(response.sys().sunset());
+
+            printLine(YELLOW + "🌅 Amanecer", sunrise);
+            printLine(MAGENTA + "🌇 Atardecer", sunset);
+        }
+
         // 🕒 FECHA
         printLine(YELLOW + "🕒 Fecha", dateTime);
 
         System.out.println(border + RESET);
     }
 
+    // 📦 PRINT LINE
     private static void printLine(String label, String value) {
         System.out.printf(" %-20s : %-20s %n", label + RESET, value + RESET);
     }
