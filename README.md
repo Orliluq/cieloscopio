@@ -125,7 +125,7 @@ java -jar target/cieloscopio.jar
 
 ## 🎯 Filosofía del proyecto
 
-“El software no solo debe funcionar… debe sentirse vivo.” Cieloscopio Chiqui convierte una simple consulta API en una experiencia visual.
+> “El software no solo debe funcionar… debe sentirse vivo.” Cieloscopio Chiqui convierte una simple consulta API en una experiencia visual.
 
 --- 
 
@@ -139,8 +139,9 @@ java -jar target/cieloscopio.jar
 
 --- 
 
-## 📄 Licencia
-MIT License - ver archivo LICENSE para detalles.
+## 📄 **Licencia**
+
+MIT License - ver archivo [LICENSE](LICENSE) para detalles.
 
 ---
 
