@@ -1,6 +1,6 @@
 # 🌤️ Cieloscopio Chiqui
 
-> *“El cielo no se mira… se consulta.”* ☁️✨
+> *“Un pequeño oráculo en Java que traduce el cielo en datos.”* ☁️✨ *“El cielo no se mira… se consulta.”* ☁️✨
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## 🌎 ¿Qué es Cieloscopio Chiqui?
 
-Cieloscopio Chiqui es una **app de consola en Java** que consulta el clima en tiempo real usando OpenWeatherMap y lo muestra como un dashboard meteorológico elegante, colorido y con personalidad.
+Cieloscopio Chiqui es una aplicación de consola desarrollada en **Java 21** que consume datos meteorológicos en tiempo real desde la API de OpenWeatherMap, el objetivo es aplicar habilidades reales de desarrollo backend ligero: consumo de APIs, procesamiento de JSON y construcción de una experiencia funcional desde terminal. Es una **app de consola en Java** que consulta el clima en tiempo real usando OpenWeatherMap y lo muestra como un dashboard meteorológico elegante, colorido y con personalidad.
 
 No es solo código… es una conversación con el cielo 🌤️
 
@@ -47,14 +47,27 @@ No es solo código… es una conversación con el cielo 🌤️
 
 ## 🚀 Características
 
-- 🌍 Consulta clima en cualquier ciudad del mundo
-- 🌡️ Temperatura, sensación térmica y humedad
-- 📊 Presión, viento y visibilidad
-- ☁️ Descripción del clima en lenguaje natural
-- 🌎 Bandera automática por país
-- 🕒 Fecha y hora en tiempo real
-- 🔁 Animación tipo “consultando clima…”
-- 🎨 Interfaz de consola estilizada
+- 🌍 Consulta el clima en cualquier ciudad del mundo
+- 🌡️ Muestra temperatura, sensación térmica y humedad
+- 📊 Incluye presión, viento y visibilidad
+- ☁️ Describe el estado del cielo en lenguaje natural
+- 🌎 Detecta país y muestra bandera
+- 🕒 Agrega fecha y hora de la consulta
+- 🔁 Incluye animaciones tipo “consultando el clima…”
+- 🎨 Presenta la información en una interfaz de consola estilizada
+
+---
+
+## 🧠 ¿Qué se practica en este proyecto?
+
+Este proyecto pone en práctica habilidades clave del desarrollo Java moderno:
+
+- Consumo de APIs externas con `HttpClient`
+- Procesamiento de JSON con `Gson`
+- Separación por capas (client, service, model, view, util)
+- Manejo de variables de entorno (`.env`)
+- Buenas prácticas de logging con SLF4J
+- Diseño de salida por consola tipo dashboard
 
 ---
 
@@ -138,6 +151,18 @@ java -jar target/cieloscopio.jar
 - ⚡ Cache de consultas
 
 --- 
+
+## 🎯 Aprendizaje del challenge
+
+Este proyecto simula un caso real de consumo de API meteorológica, donde se aprende a construir una aplicación funcional desde cero, integrando datos externos y presentándolos de forma clara al usuario.
+
+---
+
+## 🌱 Inspiración
+
+Basado en el challenge Cieloscópio: Practicando Java de Alura, cuyo objetivo es fortalecer habilidades de backend en Java mediante consumo de APIs y procesamiento de datos reales.
+
+---
 
 ## 📄 **Licencia**
 
