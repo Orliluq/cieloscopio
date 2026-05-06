@@ -1,5 +1,7 @@
 package com.cieloscopio.model;
 
 public record Sys(
-        String country
+        String country,
+        long sunrise,
+        long sunset
 ) {}

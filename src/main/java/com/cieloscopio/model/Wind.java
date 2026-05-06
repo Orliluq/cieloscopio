@@ -1,5 +1,7 @@
 package com.cieloscopio.model;
 
 public record Wind(
-        double speed
+        double speed,
+        int deg,
+        double gust
 ) {}

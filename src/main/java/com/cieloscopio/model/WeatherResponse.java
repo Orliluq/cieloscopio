@@ -6,7 +6,8 @@ public record WeatherResponse(
         MainData main,
         List<WeatherCondition> weather,
         String name,
-        Sys sys,
         Wind wind,
-        int visibility
+        Sys sys,
+        int visibility,
+        long dt
 ) {}

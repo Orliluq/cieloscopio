@@ -34,28 +34,45 @@ public final class ConsoleFormatter {
 
         System.out.println(border);
 
+        // 🌍 CIUDAD
         printLine(CYAN + "📍 Ciudad", response.name() + " " + flag);
-        printLine(YELLOW + "🌡️ Temperatura", response.main().temp() + " °C");
+
+        // 🌡️ TEMPERATURA (con color dinámico)
+        printLine(
+                TemperatureColor.color(response.main().temp()) + "🌡️ Temperatura",
+                response.main().temp() + " °C"
+        );
+
+        // 🤔 SENSACIÓN
         printLine(MAGENTA + "🤔 Sensación", response.main().feelsLike() + " °C");
+
+        // 💧 HUMEDAD
         printLine(BLUE + "💧 Humedad", response.main().humidity() + " %");
 
-        // 📊 extras si existen en tu modelo
-        if (response.main().pressure() != 0) {
+        // 📊 PRESIÓN
+        if (response.main().pressure() > 0) {
             printLine(GREEN + "📊 Presión", response.main().pressure() + " hPa");
         }
 
+        // 🌬️ VIENTO
         if (response.wind() != null) {
-            printLine(CYAN + "🌬️ Viento", response.wind().speed() + " m/s");
+            String wind = response.wind().speed() + " m/s (" +
+                    WindDirection.fromDegrees(response.wind().deg()) + ")";
+            printLine(CYAN + "🌬️ Viento", wind);
         }
 
-        if (response.visibility() != 0) {
+        // 👁️ VISIBILIDAD
+        if (response.visibility() > 0) {
             printLine(MAGENTA + "👁️ Visibilidad", (response.visibility() / 1000) + " km");
         }
 
+        // ☁️ CLIMA
         if (response.weather() != null && !response.weather().isEmpty()) {
-            printLine(CYAN + "☁️ Clima", response.weather().getFirst().description());
+            printLine(CYAN + "☁️ Clima",
+                    response.weather().getFirst().description());
         }
 
+        // 🕒 FECHA
         printLine(YELLOW + "🕒 Fecha", dateTime);
 
         System.out.println(border + RESET);
@@ -65,6 +82,7 @@ public final class ConsoleFormatter {
         System.out.printf(" %-20s : %-20s %n", label + RESET, value + RESET);
     }
 
+    // 🌎 BANDERA POR PAÍS
     private static String getFlag(String countryCode) {
         if (countryCode == null || countryCode.length() != 2) return "";
 

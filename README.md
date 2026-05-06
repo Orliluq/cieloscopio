@@ -94,6 +94,8 @@ com.cieloscopio
 - 🔐 dotenv-java (variables de entorno)
 - 📜 SLF4J (logging)
 - 🎨 ANSI colors en consola
+- 🚀 Postman
+- 📌 Trello
 
 ---
 
@@ -119,7 +121,59 @@ java -jar target/cieloscopio.jar
 
 --- 
 
-## 🌤️ Ejemplo de salida
+## 🌤️ Ejemplo de salida Postman
+
+```text
+{
+    "coord": {
+        "lon": -0.1257,
+        "lat": 51.5085
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 12.34,
+        "feels_like": 11.2,
+        "temp_min": 11.68,
+        "temp_max": 13.88,
+        "pressure": 1013,
+        "humidity": 60,
+        "sea_level": 1013,
+        "grnd_level": 1009
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.6,
+        "deg": 70
+    },
+    "clouds": {
+        "all": 40
+    },
+    "dt": 1778090978,
+    "sys": {
+        "type": 2,
+        "id": 2075535,
+        "country": "GB",
+        "sunrise": 1778041410,
+        "sunset": 1778095842
+    },
+    "timezone": 3600,
+    "id": 2643743,
+    "name": "London",
+    "cod": 200
+}
+```
+
+---
+
+## 🌤️ Ejemplo de salida consola
 
 ```tex
 ════════════════════════════════════════════
