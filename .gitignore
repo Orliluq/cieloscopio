@@ -1,0 +1,66 @@
+# =========================
+# 🧱 Maven
+# =========================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# =========================
+# ☕ Java
+# =========================
+*.class
+*.ctxt
+*.jar
+*.war
+*.ear
+
+# =========================
+# 📦 Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# 🔐 Environment variables
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# 💻 IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+
+# =========================
+# 🧠 VS Code
+# =========================
+.vscode/
+
+# =========================
+# 🦅 Eclipse
+# =========================
+.project
+.classpath
+.settings/
+
+# =========================
+# 🖥️ OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🐳 Docker (opcional)
+# =========================
+docker-compose.override.yml
+
+# =========================
+# 🧪 Test Coverage
+# =========================
+coverage/
